@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LoanMainReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="50f9a622-9a35-4b67-ade5-0a04880b9778">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="NO_DATA_ADAPTER"/>
+	<property name="net.sf.jasperreports.export.json.schema" value="/Users/giancarlo.almerco/Workspace/WksJaspersoft/MyReports/loanResponse.json"/>
+	<subDataset name="LoanDataDataset" uuid="162022e8-dbd7-42e0-8372-5a6c2f99266e">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Loan Data Adapter"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="585"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="401"/>
+		<queryString language="json">
+			<![CDATA[data]]>
+		</queryString>
+		<field name="id" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="id"/>
+			<fieldDescription><![CDATA[id]]></fieldDescription>
+		</field>
+		<field name="idLoan" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="idLoan"/>
+			<fieldDescription><![CDATA[idLoan]]></fieldDescription>
+		</field>
+		<field name="period" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="period"/>
+			<fieldDescription><![CDATA[period]]></fieldDescription>
+		</field>
+		<field name="interest" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="interest"/>
+			<fieldDescription><![CDATA[interest]]></fieldDescription>
+		</field>
+		<field name="amortization" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="amortization"/>
+			<fieldDescription><![CDATA[amortization]]></fieldDescription>
+		</field>
+		<field name="due" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="due"/>
+			<fieldDescription><![CDATA[due]]></fieldDescription>
+		</field>
+		<field name="totalAmortized" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="totalAmortized"/>
+			<fieldDescription><![CDATA[totalAmortized]]></fieldDescription>
+		</field>
+		<field name="outstandingCapital" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="outstandingCapital"/>
+			<fieldDescription><![CDATA[outstandingCapital]]></fieldDescription>
+		</field>
+		<field name="termPaymentDueDate" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="termPaymentDueDate"/>
+			<fieldDescription><![CDATA[termPaymentDueDate]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="jsonData" class="java.lang.String">
+		<defaultValueExpression><![CDATA["{\"loan\":{\"repaymentTerm\":120,\"gracePeriod\":3,\"amount\":\"6,000.00\",\"loanStartDate\":\"2023-10-03\",\"termType\":\"Mensual\",\"feeSum\":\"7,640.02\",\"withGracePeriod\":\"Si\",\"rate\":\"0.42\",\"disbursementDate\":\"2023-10-03\",\"id\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"email\":\"almercog@gmail.com\",\"loanEndDate\":\"2034-01-03\",\"interestSum\":\"1,640.02\"},\"data\":[{\"outstandingCapital\":\"6000\",\"period\":0,\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"termPaymentDueDate\":\"2023-11-03\"},{\"outstandingCapital\":\"6000\",\"period\":1,\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"termPaymentDueDate\":\"2023-12-03\"},{\"outstandingCapital\":\"6000\",\"period\":2,\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"termPaymentDueDate\":\"2024-01-03\"},{\"outstandingCapital\":\"6000\",\"period\":3,\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"termPaymentDueDate\":\"2024-02-03\"},{\"outstandingCapital\":\"5961.3800\",\"period\":4,\"totalAmortized\":\"38.62\",\"due\":\"63.6669\",\"interest\":\"25.046927\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"38.619973\",\"termPaymentDueDate\":\"2024-03-03\"},{\"outstandingCapital\":\"5922.5988\",\"period\":5,\"totalAmortized\":\"77.40\",\"due\":\"63.6669\",\"interest\":\"24.885709\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"38.781191\",\"termPaymentDueDate\":\"2024-04-03\"},{\"outstandingCapital\":\"5883.6557\",\"period\":6,\"totalAmortized\":\"116.3\",\"due\":\"63.6669\",\"interest\":\"24.723817\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"38.943083\",\"termPaymentDueDate\":\"2024-05-03\"},{\"outstandingCapital\":\"5844.5500\",\"period\":7,\"totalAmortized\":\"155.4\",\"due\":\"63.6669\",\"interest\":\"24.561250\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"39.105650\",\"termPaymentDueDate\":\"2024-06-03\"},{\"outstandingCapital\":\"5805.2811\",\"period\":8,\"totalAmortized\":\"194.7\",\"due\":\"63.6669\",\"interest\":\"24.398003\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"39.268897\",\"termPaymentDueDate\":\"2024-07-03\"},{\"outstandingCapital\":\"5765.8483\",\"period\":9,\"totalAmortized\":\"234.1\",\"due\":\"63.6669\",\"interest\":\"24.234076\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"39.432824\",\"termPaymentDueDate\":\"2024-08-03\"},{\"outstandingCapital\":\"5726.2509\",\"period\":10,\"totalAmortized\":\"273.7\",\"due\":\"63.6669\",\"interest\":\"24.069464\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"39.597436\",\"termPaymentDueDate\":\"2024-09-03\"},{\"outstandingCapital\":\"5686.4882\",\"period\":11,\"totalAmortized\":\"313.5\",\"due\":\"63.6669\",\"interest\":\"23.904165\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"39.762735\",\"termPaymentDueDate\":\"2024-10-03\"},{\"outstandingCapital\":\"5646.5595\",\"period\":12,\"totalAmortized\":\"353.4\",\"due\":\"63.6669\",\"interest\":\"23.738176\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"39.928724\",\"termPaymentDueDate\":\"2024-11-03\"},{\"outstandingCapital\":\"5606.4641\",\"period\":13,\"totalAmortized\":\"393.5\",\"due\":\"63.6669\",\"interest\":\"23.571494\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"40.095406\",\"termPaymentDueDate\":\"2024-12-03\"},{\"outstandingCapital\":\"5566.2013\",\"period\":14,\"totalAmortized\":\"433.8\",\"due\":\"63.6669\",\"interest\":\"23.404117\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"40.262783\",\"termPaymentDueDate\":\"2025-01-03\"},{\"outstandingCapital\":\"5525.7704\",\"period\":15,\"totalAmortized\":\"474.2\",\"due\":\"63.6669\",\"interest\":\"23.236040\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"40.430860\",\"termPaymentDueDate\":\"2025-02-03\"},{\"outstandingCapital\":\"5485.1708\",\"period\":16,\"totalAmortized\":\"514.8\",\"due\":\"63.6669\",\"interest\":\"23.067262\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"40.599638\",\"termPaymentDueDate\":\"2025-03-03\"},{\"outstandingCapital\":\"5444.4017\",\"period\":17,\"totalAmortized\":\"555.6\",\"due\":\"63.6669\",\"interest\":\"22.897779\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"40.769121\",\"termPaymentDueDate\":\"2025-04-03\"},{\"outstandingCapital\":\"5403.4624\",\"period\":18,\"totalAmortized\":\"596.5\",\"due\":\"63.6669\",\"interest\":\"22.727589\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"40.939311\",\"termPaymentDueDate\":\"2025-05-03\"},{\"outstandingCapital\":\"5362.3522\",\"period\":19,\"totalAmortized\":\"637.6\",\"due\":\"63.6669\",\"interest\":\"22.556688\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"41.110212\",\"termPaymentDueDate\":\"2025-06-03\"},{\"outstandingCapital\":\"5321.0704\",\"period\":20,\"totalAmortized\":\"678.9\",\"due\":\"63.6669\",\"interest\":\"22.385074\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"41.281826\",\"termPaymentDueDate\":\"2025-07-03\"},{\"outstandingCapital\":\"5279.6162\",\"period\":21,\"totalAmortized\":\"720.4\",\"due\":\"63.6669\",\"interest\":\"22.212744\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"41.454156\",\"termPaymentDueDate\":\"2025-08-03\"},{\"outstandingCapital\":\"5237.9890\",\"period\":22,\"totalAmortized\":\"762.0\",\"due\":\"63.6669\",\"interest\":\"22.039694\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"41.627206\",\"termPaymentDueDate\":\"2025-09-03\"},{\"outstandingCapital\":\"5196.1880\",\"period\":23,\"totalAmortized\":\"803.8\",\"due\":\"63.6669\",\"interest\":\"21.865922\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"41.800978\",\"termPaymentDueDate\":\"2025-10-03\"},{\"outstandingCapital\":\"5154.2125\",\"period\":24,\"totalAmortized\":\"845.8\",\"due\":\"63.6669\",\"interest\":\"21.691424\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"41.975476\",\"termPaymentDueDate\":\"2025-11-03\"},{\"outstandingCapital\":\"5112.0618\",\"period\":25,\"totalAmortized\":\"888.0\",\"due\":\"63.6669\",\"interest\":\"21.516198\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"42.150702\",\"termPaymentDueDate\":\"2025-12-03\"},{\"outstandingCapital\":\"5069.7351\",\"period\":26,\"totalAmortized\":\"930.3\",\"due\":\"63.6669\",\"interest\":\"21.340240\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"42.326660\",\"termPaymentDueDate\":\"2026-01-03\"},{\"outstandingCapital\":\"5027.2317\",\"period\":27,\"totalAmortized\":\"972.8\",\"due\":\"63.6669\",\"interest\":\"21.163548\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"42.503352\",\"termPaymentDueDate\":\"2026-02-03\"},{\"outstandingCapital\":\"4984.5509\",\"period\":28,\"totalAmortized\":\"1015\",\"due\":\"63.6669\",\"interest\":\"20.986118\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"42.680782\",\"termPaymentDueDate\":\"2026-03-03\"},{\"outstandingCapital\":\"4941.6919\",\"period\":29,\"totalAmortized\":\"1058\",\"due\":\"63.6669\",\"interest\":\"20.807947\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"42.858953\",\"termPaymentDueDate\":\"2026-04-03\"},{\"outstandingCapital\":\"4898.6540\",\"period\":30,\"totalAmortized\":\"1101\",\"due\":\"63.6669\",\"interest\":\"20.629033\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"43.037867\",\"termPaymentDueDate\":\"2026-05-03\"},{\"outstandingCapital\":\"4855.4365\",\"period\":31,\"totalAmortized\":\"1144\",\"due\":\"63.6669\",\"interest\":\"20.449372\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"43.217528\",\"termPaymentDueDate\":\"2026-06-03\"},{\"outstandingCapital\":\"4812.0386\",\"period\":32,\"totalAmortized\":\"1187\",\"due\":\"63.6669\",\"interest\":\"20.268961\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"43.397939\",\"termPaymentDueDate\":\"2026-07-03\"},{\"outstandingCapital\":\"4768.4595\",\"period\":33,\"totalAmortized\":\"1231\",\"due\":\"63.6669\",\"interest\":\"20.087797\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"43.579103\",\"termPaymentDueDate\":\"2026-08-03\"},{\"outstandingCapital\":\"4724.6985\",\"period\":34,\"totalAmortized\":\"1275\",\"due\":\"63.6669\",\"interest\":\"19.905876\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"43.761024\",\"termPaymentDueDate\":\"2026-09-03\"},{\"outstandingCapital\":\"4680.7548\",\"period\":35,\"totalAmortized\":\"1319\",\"due\":\"63.6669\",\"interest\":\"19.723197\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"43.943703\",\"termPaymentDueDate\":\"2026-10-03\"},{\"outstandingCapital\":\"4636.6277\",\"period\":36,\"totalAmortized\":\"1363\",\"due\":\"63.6669\",\"interest\":\"19.539754\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"44.127146\",\"termPaymentDueDate\":\"2026-11-03\"},{\"outstandingCapital\":\"4592.3163\",\"period\":37,\"totalAmortized\":\"1407\",\"due\":\"63.6669\",\"interest\":\"19.355546\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"44.311354\",\"termPaymentDueDate\":\"2026-12-03\"},{\"outstandingCapital\":\"4547.8200\",\"period\":38,\"totalAmortized\":\"1451\",\"due\":\"63.6669\",\"interest\":\"19.170569\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"44.496331\",\"termPaymentDueDate\":\"2027-01-03\"},{\"outstandingCapital\":\"4503.1379\",\"period\":39,\"totalAmortized\":\"1496\",\"due\":\"63.6669\",\"interest\":\"18.984820\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"44.682080\",\"termPaymentDueDate\":\"2027-02-03\"},{\"outstandingCapital\":\"4458.2693\",\"period\":40,\"totalAmortized\":\"1541\",\"due\":\"63.6669\",\"interest\":\"18.798295\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"44.868605\",\"termPaymentDueDate\":\"2027-03-03\"},{\"outstandingCapital\":\"4413.2134\",\"period\":41,\"totalAmortized\":\"1586\",\"due\":\"63.6669\",\"interest\":\"18.610991\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"45.055909\",\"termPaymentDueDate\":\"2027-04-03\"},{\"outstandingCapital\":\"4367.9694\",\"period\":42,\"totalAmortized\":\"1631\",\"due\":\"63.6669\",\"interest\":\"18.422906\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"45.243994\",\"termPaymentDueDate\":\"2027-05-03\"},{\"outstandingCapital\":\"4322.5365\",\"period\":43,\"totalAmortized\":\"1676\",\"due\":\"63.6669\",\"interest\":\"18.234035\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"45.432865\",\"termPaymentDueDate\":\"2027-06-03\"},{\"outstandingCapital\":\"4276.9140\",\"period\":44,\"totalAmortized\":\"1722\",\"due\":\"63.6669\",\"interest\":\"18.044376\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"45.622524\",\"termPaymentDueDate\":\"2027-07-03\"},{\"outstandingCapital\":\"4231.1010\",\"period\":45,\"totalAmortized\":\"1768\",\"due\":\"63.6669\",\"interest\":\"17.853926\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"45.812974\",\"termPaymentDueDate\":\"2027-08-03\"},{\"outstandingCapital\":\"4185.0968\",\"period\":46,\"totalAmortized\":\"1814\",\"due\":\"63.6669\",\"interest\":\"17.662680\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"46.004220\",\"termPaymentDueDate\":\"2027-09-03\"},{\"outstandingCapital\":\"4138.9005\",\"period\":47,\"totalAmortized\":\"1860\",\"due\":\"63.6669\",\"interest\":\"17.470636\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"46.196264\",\"termPaymentDueDate\":\"2027-10-03\"},{\"outstandingCapital\":\"4092.5114\",\"period\":48,\"totalAmortized\":\"1906\",\"due\":\"63.6669\",\"interest\":\"17.277790\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"46.389110\",\"termPaymentDueDate\":\"2027-11-03\"},{\"outstandingCapital\":\"4045.9286\",\"period\":49,\"totalAmortized\":\"1953\",\"due\":\"63.6669\",\"interest\":\"17.084139\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"46.582761\",\"termPaymentDueDate\":\"2027-12-03\"},{\"outstandingCapital\":\"3999.1514\",\"period\":50,\"totalAmortized\":\"2000\",\"due\":\"63.6669\",\"interest\":\"16.889680\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"46.777220\",\"termPaymentDueDate\":\"2028-01-03\"},{\"outstandingCapital\":\"3952.1789\",\"period\":51,\"totalAmortized\":\"2047\",\"due\":\"63.6669\",\"interest\":\"16.694409\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"46.972491\",\"termPaymentDueDate\":\"2028-02-03\"},{\"outstandingCapital\":\"3905.0103\",\"period\":52,\"totalAmortized\":\"2094\",\"due\":\"63.6669\",\"interest\":\"16.498323\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"47.168577\",\"termPaymentDueDate\":\"2028-03-03\"},{\"outstandingCapital\":\"3857.6448\",\"period\":53,\"totalAmortized\":\"2141\",\"due\":\"63.6669\",\"interest\":\"16.301418\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"47.365482\",\"termPaymentDueDate\":\"2028-04-03\"},{\"outstandingCapital\":\"3810.0816\",\"period\":54,\"totalAmortized\":\"2189\",\"due\":\"63.6669\",\"interest\":\"16.103692\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"47.563208\",\"termPaymentDueDate\":\"2028-05-03\"},{\"outstandingCapital\":\"3762.3198\",\"period\":55,\"totalAmortized\":\"2237\",\"due\":\"63.6669\",\"interest\":\"15.905140\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"47.761760\",\"termPaymentDueDate\":\"2028-06-03\"},{\"outstandingCapital\":\"3714.3587\",\"period\":56,\"totalAmortized\":\"2285\",\"due\":\"63.6669\",\"interest\":\"15.705758\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"47.961142\",\"termPaymentDueDate\":\"2028-07-03\"},{\"outstandingCapital\":\"3666.1973\",\"period\":57,\"totalAmortized\":\"2333\",\"due\":\"63.6669\",\"interest\":\"15.505545\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"48.161355\",\"termPaymentDueDate\":\"2028-08-03\"},{\"outstandingCapital\":\"3617.8349\",\"period\":58,\"totalAmortized\":\"2381\",\"due\":\"63.6669\",\"interest\":\"15.304496\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"48.362404\",\"termPaymentDueDate\":\"2028-09-03\"},{\"outstandingCapital\":\"3569.2706\",\"period\":59,\"totalAmortized\":\"2430\",\"due\":\"63.6669\",\"interest\":\"15.102608\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"48.564292\",\"termPaymentDueDate\":\"2028-10-03\"},{\"outstandingCapital\":\"3520.5036\",\"period\":60,\"totalAmortized\":\"2479\",\"due\":\"63.6669\",\"interest\":\"14.899877\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"48.767023\",\"termPaymentDueDate\":\"2028-11-03\"},{\"outstandingCapital\":\"3471.5330\",\"period\":61,\"totalAmortized\":\"2528\",\"due\":\"63.6669\",\"interest\":\"14.696300\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"48.970600\",\"termPaymentDueDate\":\"2028-12-03\"},{\"outstandingCapital\":\"3422.3580\",\"period\":62,\"totalAmortized\":\"2577\",\"due\":\"63.6669\",\"interest\":\"14.491873\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"49.175027\",\"termPaymentDueDate\":\"2029-01-03\"},{\"outstandingCapital\":\"3372.9777\",\"period\":63,\"totalAmortized\":\"2626\",\"due\":\"63.6669\",\"interest\":\"14.286592\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"49.380308\",\"termPaymentDueDate\":\"2029-02-03\"},{\"outstandingCapital\":\"3323.3913\",\"period\":64,\"totalAmortized\":\"2676\",\"due\":\"63.6669\",\"interest\":\"14.080455\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"49.586445\",\"termPaymentDueDate\":\"2029-03-03\"},{\"outstandingCapital\":\"3273.5979\",\"period\":65,\"totalAmortized\":\"2726\",\"due\":\"63.6669\",\"interest\":\"13.873457\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"49.793443\",\"termPaymentDueDate\":\"2029-04-03\"},{\"outstandingCapital\":\"3223.5966\",\"period\":66,\"totalAmortized\":\"2776\",\"due\":\"63.6669\",\"interest\":\"13.665595\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"50.001305\",\"termPaymentDueDate\":\"2029-05-03\"},{\"outstandingCapital\":\"3173.3866\",\"period\":67,\"totalAmortized\":\"2826\",\"due\":\"63.6669\",\"interest\":\"13.456865\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"50.210035\",\"termPaymentDueDate\":\"2029-06-03\"},{\"outstandingCapital\":\"3122.9670\",\"period\":68,\"totalAmortized\":\"2876\",\"due\":\"63.6669\",\"interest\":\"13.247264\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"50.419636\",\"termPaymentDueDate\":\"2029-07-03\"},{\"outstandingCapital\":\"3072.3369\",\"period\":69,\"totalAmortized\":\"2927\",\"due\":\"63.6669\",\"interest\":\"13.036788\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"50.630112\",\"termPaymentDueDate\":\"2029-08-03\"},{\"outstandingCapital\":\"3021.4954\",\"period\":70,\"totalAmortized\":\"2978\",\"due\":\"63.6669\",\"interest\":\"12.825433\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"50.841467\",\"termPaymentDueDate\":\"2029-09-03\"},{\"outstandingCapital\":\"2970.4417\",\"period\":71,\"totalAmortized\":\"3029\",\"due\":\"63.6669\",\"interest\":\"12.613196\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"51.053704\",\"termPaymentDueDate\":\"2029-10-03\"},{\"outstandingCapital\":\"2919.1749\",\"period\":72,\"totalAmortized\":\"3080\",\"due\":\"63.6669\",\"interest\":\"12.400073\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"51.266827\",\"termPaymentDueDate\":\"2029-11-03\"},{\"outstandingCapital\":\"2867.6941\",\"period\":73,\"totalAmortized\":\"3131\",\"due\":\"63.6669\",\"interest\":\"12.186060\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"51.480840\",\"termPaymentDueDate\":\"2029-12-03\"},{\"outstandingCapital\":\"2815.9984\",\"period\":74,\"totalAmortized\":\"3183\",\"due\":\"63.6669\",\"interest\":\"11.971154\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"51.695746\",\"termPaymentDueDate\":\"2030-01-03\"},{\"outstandingCapital\":\"2764.0869\",\"period\":75,\"totalAmortized\":\"3235\",\"due\":\"63.6669\",\"interest\":\"11.755351\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"51.911549\",\"termPaymentDueDate\":\"2030-02-03\"},{\"outstandingCapital\":\"2711.9586\",\"period\":76,\"totalAmortized\":\"3287\",\"due\":\"63.6669\",\"interest\":\"11.538647\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"52.128253\",\"termPaymentDueDate\":\"2030-03-03\"},{\"outstandingCapital\":\"2659.6127\",\"period\":77,\"totalAmortized\":\"3339\",\"due\":\"63.6669\",\"interest\":\"11.321038\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"52.345862\",\"termPaymentDueDate\":\"2030-04-03\"},{\"outstandingCapital\":\"2607.0483\",\"period\":78,\"totalAmortized\":\"3392\",\"due\":\"63.6669\",\"interest\":\"11.102521\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"52.564379\",\"termPaymentDueDate\":\"2030-05-03\"},{\"outstandingCapital\":\"2554.2645\",\"period\":79,\"totalAmortized\":\"3445\",\"due\":\"63.6669\",\"interest\":\"10.883092\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"52.783808\",\"termPaymentDueDate\":\"2030-06-03\"},{\"outstandingCapital\":\"2501.2603\",\"period\":80,\"totalAmortized\":\"3498\",\"due\":\"63.6669\",\"interest\":\"10.662746\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"53.004154\",\"termPaymentDueDate\":\"2030-07-03\"},{\"outstandingCapital\":\"2448.0349\",\"period\":81,\"totalAmortized\":\"3551\",\"due\":\"63.6669\",\"interest\":\"10.441481\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"53.225419\",\"termPaymentDueDate\":\"2030-08-03\"},{\"outstandingCapital\":\"2394.5873\",\"period\":82,\"totalAmortized\":\"3604\",\"due\":\"63.6669\",\"interest\":\"10.219292\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"53.447608\",\"termPaymentDueDate\":\"2030-09-03\"},{\"outstandingCapital\":\"2340.9166\",\"period\":83,\"totalAmortized\":\"3658\",\"due\":\"63.6669\",\"interest\":\"9.9961757\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"53.6707243\",\"termPaymentDueDate\":\"2030-10-03\"},{\"outstandingCapital\":\"2287.0218\",\"period\":84,\"totalAmortized\":\"3712\",\"due\":\"63.6669\",\"interest\":\"9.7721280\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"53.8947720\",\"termPaymentDueDate\":\"2030-11-03\"},{\"outstandingCapital\":\"2232.9020\",\"period\":85,\"totalAmortized\":\"3766\",\"due\":\"63.6669\",\"interest\":\"9.5471448\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"54.1197552\",\"termPaymentDueDate\":\"2030-12-03\"},{\"outstandingCapital\":\"2178.5563\",\"period\":86,\"totalAmortized\":\"3820\",\"due\":\"63.6669\",\"interest\":\"9.3212224\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"54.3456776\",\"termPaymentDueDate\":\"2031-01-03\"},{\"outstandingCapital\":\"2123.9838\",\"period\":87,\"totalAmortized\":\"3875\",\"due\":\"63.6669\",\"interest\":\"9.0943569\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"54.5725431\",\"termPaymentDueDate\":\"2031-02-03\"},{\"outstandingCapital\":\"2069.1834\",\"period\":88,\"totalAmortized\":\"3930\",\"due\":\"63.6669\",\"interest\":\"8.8665447\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"54.8003553\",\"termPaymentDueDate\":\"2031-03-03\"},{\"outstandingCapital\":\"2014.1543\",\"period\":89,\"totalAmortized\":\"3985\",\"due\":\"63.6669\",\"interest\":\"8.6377811\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"55.0291189\",\"termPaymentDueDate\":\"2031-04-03\"},{\"outstandingCapital\":\"1958.8955\",\"period\":90,\"totalAmortized\":\"4040\",\"due\":\"63.6669\",\"interest\":\"8.4080628\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"55.2588372\",\"termPaymentDueDate\":\"2031-05-03\"},{\"outstandingCapital\":\"1903.4060\",\"period\":91,\"totalAmortized\":\"4095\",\"due\":\"63.6669\",\"interest\":\"8.1773856\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"55.4895144\",\"termPaymentDueDate\":\"2031-06-03\"},{\"outstandingCapital\":\"1847.6848\",\"period\":92,\"totalAmortized\":\"4151\",\"due\":\"63.6669\",\"interest\":\"7.9457453\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"55.7211547\",\"termPaymentDueDate\":\"2031-07-03\"},{\"outstandingCapital\":\"1791.7310\",\"period\":93,\"totalAmortized\":\"4207\",\"due\":\"63.6669\",\"interest\":\"7.7131378\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"55.9537622\",\"termPaymentDueDate\":\"2031-08-03\"},{\"outstandingCapital\":\"1735.5437\",\"period\":94,\"totalAmortized\":\"4263\",\"due\":\"63.6669\",\"interest\":\"7.4795594\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"56.1873406\",\"termPaymentDueDate\":\"2031-09-03\"},{\"outstandingCapital\":\"1679.1218\",\"period\":95,\"totalAmortized\":\"4319\",\"due\":\"63.6669\",\"interest\":\"7.2450062\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"56.4218938\",\"termPaymentDueDate\":\"2031-10-03\"},{\"outstandingCapital\":\"1622.4644\",\"period\":96,\"totalAmortized\":\"4376\",\"due\":\"63.6669\",\"interest\":\"7.0094736\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"56.6574264\",\"termPaymentDueDate\":\"2031-11-03\"},{\"outstandingCapital\":\"1565.5705\",\"period\":97,\"totalAmortized\":\"4433\",\"due\":\"63.6669\",\"interest\":\"6.7729580\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"56.8939420\",\"termPaymentDueDate\":\"2031-12-03\"},{\"outstandingCapital\":\"1508.4391\",\"period\":98,\"totalAmortized\":\"4490\",\"due\":\"63.6669\",\"interest\":\"6.5354551\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"57.1314449\",\"termPaymentDueDate\":\"2032-01-03\"},{\"outstandingCapital\":\"1451.0692\",\"period\":99,\"totalAmortized\":\"4547\",\"due\":\"63.6669\",\"interest\":\"6.2969608\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"57.3699392\",\"termPaymentDueDate\":\"2032-02-03\"},{\"outstandingCapital\":\"1393.4598\",\"period\":100,\"totalAmortized\":\"4605\",\"due\":\"63.6669\",\"interest\":\"6.0574708\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"57.6094292\",\"termPaymentDueDate\":\"2032-03-03\"},{\"outstandingCapital\":\"1335.6099\",\"period\":101,\"totalAmortized\":\"4663\",\"due\":\"63.6669\",\"interest\":\"5.8169811\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"57.8499189\",\"termPaymentDueDate\":\"2032-04-03\"},{\"outstandingCapital\":\"1277.5185\",\"period\":102,\"totalAmortized\":\"4721\",\"due\":\"63.6669\",\"interest\":\"5.5754874\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"58.0914126\",\"termPaymentDueDate\":\"2032-05-03\"},{\"outstandingCapital\":\"1219.1846\",\"period\":103,\"totalAmortized\":\"4779\",\"due\":\"63.6669\",\"interest\":\"5.3329855\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"58.3339145\",\"termPaymentDueDate\":\"2032-06-03\"},{\"outstandingCapital\":\"1160.6072\",\"period\":104,\"totalAmortized\":\"4838\",\"due\":\"63.6669\",\"interest\":\"5.0894714\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"58.5774286\",\"termPaymentDueDate\":\"2032-07-03\"},{\"outstandingCapital\":\"1101.7852\",\"period\":105,\"totalAmortized\":\"4897\",\"due\":\"63.6669\",\"interest\":\"4.8449407\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"58.8219593\",\"termPaymentDueDate\":\"2032-08-03\"},{\"outstandingCapital\":\"1042.7177\",\"period\":106,\"totalAmortized\":\"4956\",\"due\":\"63.6669\",\"interest\":\"4.5993890\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"59.0675110\",\"termPaymentDueDate\":\"2032-09-03\"},{\"outstandingCapital\":\"983.40361\",\"period\":107,\"totalAmortized\":\"5015\",\"due\":\"63.6669\",\"interest\":\"4.3528124\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"59.3140876\",\"termPaymentDueDate\":\"2032-10-03\"},{\"outstandingCapital\":\"923.84192\",\"period\":108,\"totalAmortized\":\"5075\",\"due\":\"63.6669\",\"interest\":\"4.1052065\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"59.5616935\",\"termPaymentDueDate\":\"2032-11-03\"},{\"outstandingCapital\":\"864.03159\",\"period\":109,\"totalAmortized\":\"5135\",\"due\":\"63.6669\",\"interest\":\"3.8565669\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"59.8103331\",\"termPaymentDueDate\":\"2032-12-03\"},{\"outstandingCapital\":\"803.97158\",\"period\":110,\"totalAmortized\":\"5195\",\"due\":\"63.6669\",\"interest\":\"3.6068894\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"60.0600106\",\"termPaymentDueDate\":\"2033-01-03\"},{\"outstandingCapital\":\"743.66085\",\"period\":111,\"totalAmortized\":\"5255\",\"due\":\"63.6669\",\"interest\":\"3.3561696\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"60.3107304\",\"termPaymentDueDate\":\"2033-02-03\"},{\"outstandingCapital\":\"683.09835\",\"period\":112,\"totalAmortized\":\"5316\",\"due\":\"63.6669\",\"interest\":\"3.1044032\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"60.5624968\",\"termPaymentDueDate\":\"2033-03-03\"},{\"outstandingCapital\":\"622.28304\",\"period\":113,\"totalAmortized\":\"5377\",\"due\":\"63.6669\",\"interest\":\"2.8515858\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"60.8153142\",\"termPaymentDueDate\":\"2033-04-03\"},{\"outstandingCapital\":\"561.21385\",\"period\":114,\"totalAmortized\":\"5438\",\"due\":\"63.6669\",\"interest\":\"2.5977130\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"61.0691870\",\"termPaymentDueDate\":\"2033-05-03\"},{\"outstandingCapital\":\"499.88973\",\"period\":115,\"totalAmortized\":\"5499\",\"due\":\"63.6669\",\"interest\":\"2.3427804\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"61.3241196\",\"termPaymentDueDate\":\"2033-06-03\"},{\"outstandingCapital\":\"438.30961\",\"period\":116,\"totalAmortized\":\"5561\",\"due\":\"63.6669\",\"interest\":\"2.0867836\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"61.5801164\",\"termPaymentDueDate\":\"2033-07-03\"},{\"outstandingCapital\":\"376.47243\",\"period\":117,\"totalAmortized\":\"5623\",\"due\":\"63.6669\",\"interest\":\"1.8297182\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"61.8371818\",\"termPaymentDueDate\":\"2033-08-03\"},{\"outstandingCapital\":\"314.37711\",\"period\":118,\"totalAmortized\":\"5685\",\"due\":\"63.6669\",\"interest\":\"1.5715796\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"62.0953204\",\"termPaymentDueDate\":\"2033-09-03\"},{\"outstandingCapital\":\"252.02257\",\"period\":119,\"totalAmortized\":\"5747\",\"due\":\"63.6669\",\"interest\":\"1.3123634\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"62.3545366\",\"termPaymentDueDate\":\"2033-10-03\"},{\"outstandingCapital\":\"189.40774\",\"period\":120,\"totalAmortized\":\"5810\",\"due\":\"63.6669\",\"interest\":\"1.0520652\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"62.6148348\",\"termPaymentDueDate\":\"2033-11-03\"},{\"outstandingCapital\":\"126.53152\",\"period\":121,\"totalAmortized\":\"5873\",\"due\":\"63.6669\",\"interest\":\"0.79068032\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"62.87621968\",\"termPaymentDueDate\":\"2033-12-03\"},{\"outstandingCapital\":\"63.392824\",\"period\":122,\"totalAmortized\":\"5936\",\"due\":\"63.6669\",\"interest\":\"0.52820430\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"63.13869570\",\"termPaymentDueDate\":\"2034-01-03\"},{\"outstandingCapital\":\"-0.00944342\",\"period\":123,\"totalAmortized\":\"5999\",\"due\":\"63.6669\",\"interest\":\"0.26463258\",\"idLoan\":\"abe240aa-bb26-43d6-8a9f-266cba2569a4\",\"amortization\":\"63.40226742\",\"termPaymentDueDate\":\"2034-02-03\"}]}"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="JSON_INPUT_STREAM" class="java.io.InputStream" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.io.ByteArrayInputStream($P{jsonData}.getBytes("UTF-8"))]]></defaultValueExpression>
+	</parameter>
+	<parameter name="reportDir" class="java.lang.String" nestedType="java.lang.String">
+		<parameterDescription><![CDATA[Report directory]]></parameterDescription>
+	</parameter>
+	<queryString language="json">
+		<![CDATA[]]>
+	</queryString>
+	<field name="loan" class="java.lang.Object">
+		<property name="net.sf.jasperreports.json.field.expression" value="loan"/>
+		<fieldDescription><![CDATA[loan]]></fieldDescription>
+	</field>
+	<field name="data" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="data"/>
+		<fieldDescription><![CDATA[data]]></fieldDescription>
+	</field>
+	<title>
+		<band height="205" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image isLazy="true">
+				<reportElement x="0" y="0" width="190" height="50" uuid="69a31c84-542a-4ea5-b0e3-2741361ed2c5"/>
+				<imageExpression><![CDATA[$P{reportDir}+"logoBbva.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="10" y="51" width="531" height="60" uuid="ff0c54b5-ab6c-42e1-8876-e4808e0d15cd"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Simulación de Préstamos usando el Sistema de amortización Francés]]></text>
+			</staticText>
+			<subreport>
+				<reportElement isPrintRepeatedValues="false" x="0" y="120" width="554" height="80" uuid="e50d8034-4633-4c33-bab2-2c149b6514de">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JsonDataSource(new java.io.ByteArrayInputStream($P{jsonData}.getBytes("UTF-8")), "loan")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{reportDir}+"LoanChildReport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="554" height="30" forecolor="#FFFFFF" backcolor="#999999" uuid="0920fc66-2271-42c2-969a-b022a3550202">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
+				</box>
+				<text><![CDATA[
+                    
+                ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="0" width="84" height="30" forecolor="#000000" uuid="f5a72d10-1fc4-4dec-945f-770144d29187">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Fecha de Vencimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="30" uuid="67306896-2b4c-44a0-8416-df7d683afe14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero de Cuota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="84" height="30" forecolor="#FFFFFF" backcolor="#70A9A9" uuid="e8adc407-b319-44b0-90ac-81cfd7ccd6b5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Interes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="0" width="84" height="30" uuid="edc1e3c0-3edc-448b-8298-6acd43ea26a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amortizacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="0" width="84" height="30" forecolor="#FFFFFF" backcolor="#70A9A9" uuid="f074195b-e5a2-45f2-b7fa-b6ea076832a1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cuota de pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="302" y="0" width="84" height="30" backcolor="#999999" uuid="7f2290b2-2f98-4d21-b266-a916a43b5844"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Amortizado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="0" width="84" height="30" forecolor="#FFFFFF" backcolor="#999999" uuid="8275e589-b4c8-4a80-9f6f-a1732b1493ba">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Capital Pendiente]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement x="0" y="0" width="554" height="30" uuid="255fc050-3a6b-468c-80e8-4cb700444011">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="LoanDataDataset" uuid="9c4af708-093b-4e67-8cbc-f3050b76b761">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JsonDataSource(new java.io.ByteArrayInputStream($P{jsonData}.getBytes("UTF-8")), "data")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="30" width="554">
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="50" height="30" uuid="fd851850-50da-4218-9e5b-2a000542d16c">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$F{period}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="50" y="0" width="84" height="30" uuid="303ae500-6430-4f3a-a5fd-6a624bc65996">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Right" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[($F{interest} != null) ? new DecimalFormat("#,##0.00").format(Double.valueOf($F{interest})) : ""]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="134" y="0" width="84" height="30" uuid="8231f2f6-f60b-4cef-bba7-43758b51fb5d">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Right" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[($F{amortization} != null) ? new DecimalFormat("#,##0.00").format(Double.valueOf($F{amortization})) : ""]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="218" y="0" width="84" height="30" uuid="99733c3f-1469-4bec-adcf-cb018c83e3ea">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Right" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[($F{due} != null) ? new DecimalFormat("#,##0.00").format(Double.valueOf($F{due})) : ""]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="302" y="0" width="84" height="30" uuid="2782009e-d43d-413f-b9a9-c82c9c44b1f1">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Right" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[($F{totalAmortized} != null) ? new DecimalFormat("#,##0.00").format(Double.valueOf($F{totalAmortized})) : ""]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="386" y="0" width="84" height="30" uuid="08df0ecb-4bc5-4151-83e8-dadc6f249fc1">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Right" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[($F{outstandingCapital} != null) ? new DecimalFormat("#,##0.00").format(Double.valueOf($F{outstandingCapital})) : ""]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="470" y="0" width="84" height="30" uuid="0022f743-6f18-4e86-8628-c228f976275d">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$F{termPaymentDueDate}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

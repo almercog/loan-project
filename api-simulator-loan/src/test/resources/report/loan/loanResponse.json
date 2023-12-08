@@ -1,0 +1,136 @@
+{
+	"loan": {
+		"amount": "8,000.00",
+		"rate": "5.00",
+		"termType": "Anual",
+		"repaymentTerm": "10",
+		"withGracePeriod": "No",
+		"gracePeriod": "0",
+		"feeSum": "10,417.81",
+		"interestSum": "417.81",
+		"disbursementDate": "2023-10-29"
+	},
+	"data": [
+		{
+			"id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
+			"idLoan": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed",
+			"period": 0,
+			"due": "",
+			"interest": "",
+			"amortization": "",
+			"totalAmortized": "",
+			"outstandingCapital": "8,000.00",
+			"termPaymentDueDate": "2023-10-29"
+		},
+		{
+			"id": "f495a6de-9654-4be5-a6b4-60956aef6183",
+			"idLoan": "fbbc7fd1-a5f0-47c2-9a0d-6b290549c7c7",
+			"period": 1,
+			"due": "1,041.78",
+			"interest": "409.12",
+			"amortization": "632.66",
+			"totalAmortized": "632.66",
+			"outstandingCapital": "6,367.34",
+			"termPaymentDueDate": "2024-10-29"
+		},
+		{
+			"id": "5b837dc1-0d8d-4ea5-892c-e460aaef938b",
+			"idLoan": "b13e5576-d6ea-45b8-af99-ae55d593f49f",
+			"period": 2,
+			"due": "1,041.78",
+			"interest": "376.77",
+			"amortization": "665.01",
+			"totalAmortized": "1,297.67",
+			"outstandingCapital": "6,702.33",
+			"termPaymentDueDate": "2025-10-29"
+		},
+		{
+			"id": "abae9d61-7c05-448f-9fee-48e68b02c3b8",
+			"idLoan": "b85757a0-e6e2-4578-8f61-a06d1cf96adc",
+			"period": 3,
+			"due": "1,041.78",
+			"interest": "342.76",
+			"amortization": "699.02",
+			"totalAmortized": "1,996.69",
+			"outstandingCapital": "6,003.30",
+			"termPaymentDueDate": "2026-10-29"
+		},
+		{
+			"id": "d21548f2-5532-47db-af57-07dbd1dde3f9",
+			"idLoan": "4fb18084-60fa-49d8-8d71-5d4ba7788100",
+			"period": 4,
+			"due": "1,041.78",
+			"interest": "307.01",
+			"amortization": "734.77",
+			"totalAmortized": "2,731.46",
+			"outstandingCapital": "5,268.53",
+			"termPaymentDueDate": "2027-10-29"
+		},
+		{
+			"id": "f7a431c9-f061-48e4-8dc3-997abc85ca55",
+			"idLoan": "8c9f4384-85f0-4f64-8af9-cc8de159c3c3",
+			"period": 5,
+			"due": "1,041.78",
+			"interest": "269.43",
+			"amortization": "772.35",
+			"totalAmortized": "3,503.81",
+			"outstandingCapital": "4,496.19",
+			"termPaymentDueDate": "2028-10-29"
+		},
+		{
+			"id": "c4e7a6b9-cbbc-4a50-9daf-7fab28a82c68",
+			"idLoan": "cd99d278-f55e-4e05-9b96-3a412111eb15",
+			"period": 6,
+			"due": "1,041.78",
+			"interest": "229.94",
+			"amortization": "811.85",
+			"totalAmortized": "4,315.66",
+			"outstandingCapital": "3,684.34",
+			"termPaymentDueDate": "2029-10-29"
+		},
+		{
+			"id": "0ffe30e0-ecb4-4288-b0d2-751a40f22983",
+			"idLoan": "52c55cc3-462d-4ad6-9381-334f204e9796",
+			"period": 7,
+			"due": "1,041.78",
+			"interest": "188.42",
+			"amortization": "853.36",
+			"totalAmortized": "5,169.02",
+			"outstandingCapital": "2,830.98",
+			"termPaymentDueDate": "2030-10-29"
+		},
+		{
+			"id": "a5730a56-ce73-4d19-bd27-4b7d9500257e",
+			"idLoan": "3efabd32-fd5b-42eb-a80a-a94a59093b1f",
+			"period": 8,
+			"due": "1,041.78",
+			"interest": "144.78",
+			"amortization": "897.00",
+			"totalAmortized": "6,066.02",
+			"outstandingCapital": "1,933.97",
+			"termPaymentDueDate": "2031-10-29"
+		},
+		{
+			"id": "8374734c-5612-49c4-95d2-6ecb7da7caa3",
+			"idLoan": "003f38ac-0bfa-4dd9-b0b6-a619029fb78d",
+			"period": 9,
+			"due": "1,041.78",
+			"interest": "98.90",
+			"amortization": "942.88",
+			"totalAmortized": "7,008.90",
+			"outstandingCapital": "991.10",
+			"termPaymentDueDate": "2032-10-29"
+		},
+		{
+			"id": "5caeae5d-b6fb-4b07-90b0-7d91f66d34ba",
+			"idLoan": "bb55efcf-8de6-4d28-800c-779eda7c921a",
+			"period": 10,
+			"due": "1,041.78",
+			"interest": "50.68",
+			"amortization": "991.10",
+			"totalAmortized": "8,000.00",
+			"outstandingCapital": "0.00",
+			"termPaymentDueDate": "2033-10-29"
+		}
+	]
+}

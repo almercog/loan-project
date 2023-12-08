@@ -1,0 +1,147 @@
+openapi: 3.0.3
+info:
+   title: Simulate Loan Application
+   description: This is the documentation Simulate Loan Server based on the OpenAPI 3.0 specification.
+   contact:
+
+      email: almercog@gmail.com
+   license:
+      name: Apache 2.0
+      url: http://www.apache.org/licenses/LICENSE-2.0.html
+   version: 1.0.0
+servers:
+-  url: https://localhost:8080/api/
+tags:
+-  name: loan
+   description: Operations about loan
+paths:
+   /loan:
+      post:
+         tags:
+         - loan
+         summary: Calculate loan
+         description: Calculate loan.
+         operationId: loan
+         requestBody:
+            description: Simulate loan
+            content:
+               application/json:
+                  schema:
+                     $ref: '#/components/schemas/LoanRequest'
+                  examples:
+                     Simulate Annual Term Without Grace Period:
+                        value:
+                           payload:
+                              amount: 6000
+                              rate: '0.05'
+                              termType: A
+                              repaymentTerm: 3
+                              withGracePeriod: N
+                              gracePeriod: 0
+                              disbursementDate: 30/09/2023
+                              email: john.perez@mail.com
+                     Simulate Mensual Term With Grace Period:
+                        value:
+                           payload:
+                              amount: 200000
+                              rate: '0.08'
+                              termType: M
+                              repaymentTerm: 120
+                              withGracePeriod: S
+                              gracePeriod: 3
+                              disbursementDate: 25/09/2023
+                              email: jack.samchez@mail.com
+         responses:
+            '200':
+               description: successful operation
+               content:
+                  application/json:
+                     schema:
+                        $ref: '#/components/schemas/LoanResponse'
+                     examples:
+                        Simulate Annual Term Without Grace Period:
+                           value:
+                              code: 100
+                              type: OK
+                              message: We sent you an email to john.perez@mail.com
+                        Simulate Mensual Term With Grace Period:
+                           value:
+                              code: 100
+                              type: OK
+                              message: We sent you an email to jack.sanchez@mail.com
+         security:
+         -  api_key: []
+components:
+   schemas:
+      LoanRequest:
+         required:
+         - payload
+         type: object
+         properties:
+            payload:
+               $ref: '#/components/schemas/Loan'
+      LoanResponse:
+         type: object
+         properties:
+            code:
+               type: integer
+               format: int32
+            type:
+               type: string
+            message:
+               type: string
+         xml:
+            name: '##default'
+      Loan:
+         required:
+         - amount
+         - rate
+         - termType
+         - repaymentTerm
+         - disbursementDate
+         - email
+         type: object
+         properties:
+            amount:
+               type: integer
+               format: int64
+               example: 120000
+            rate:
+               type: string
+               example: '0.08'
+            termType:
+               type: string
+               enum:
+               - M
+               - A
+               example: M
+            repaymentTerm:
+               type: integer
+               format: int64
+               example: 120
+            withGracePeriod:
+               type: string
+               default: N
+               enum:
+               - S
+               - N
+               example: S
+            gracePeriod:
+               type: integer
+               format: int64
+               default: 0
+               example: 3
+            disbursementDate:
+               type: string
+               example: 2023=09-23
+            email:
+               type: string
+               format: email
+               example: john@email.com
+         xml:
+            name: loan
+   securitySchemes:
+      api_key:
+         type: apiKey
+         name: api_key
+         in: header

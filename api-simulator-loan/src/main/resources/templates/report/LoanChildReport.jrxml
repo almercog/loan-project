@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LoanChildReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d510cf58-2b78-4d3b-a23c-3a41e5b193b7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="NO_DATA_ADAPTER"/>
+	<queryString language="JSON">
+		<![CDATA[loan]]>
+	</queryString>
+	<field name="amount" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="amount"/>
+		<fieldDescription><![CDATA[amount]]></fieldDescription>
+	</field>
+	<field name="rate" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="rate"/>
+		<fieldDescription><![CDATA[rate]]></fieldDescription>
+	</field>
+	<field name="termType" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="termType"/>
+		<fieldDescription><![CDATA[termType]]></fieldDescription>
+	</field>
+	<field name="repaymentTerm" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="repaymentTerm"/>
+		<fieldDescription><![CDATA[repaymentTerm]]></fieldDescription>
+	</field>
+	<field name="withGracePeriod" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="withGracePeriod"/>
+		<fieldDescription><![CDATA[withGracePeriod]]></fieldDescription>
+	</field>
+	<field name="gracePeriod" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="gracePeriod"/>
+		<fieldDescription><![CDATA[gracePeriod]]></fieldDescription>
+	</field>
+	<field name="feeSum" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="feeSum"/>
+		<fieldDescription><![CDATA[feeSum]]></fieldDescription>
+	</field>
+	<field name="interestSum" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="interestSum"/>
+		<fieldDescription><![CDATA[interestSum]]></fieldDescription>
+	</field>
+	<field name="disbursementDate" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="disbursementDate"/>
+		<fieldDescription><![CDATA[disbursementDate]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="175" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="30" y="25" width="110" height="25" forecolor="#004481" uuid="35d6c1eb-53a0-480f-a397-eb000ba720fa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Tasa Efectiva Anual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="50" width="110" height="25" forecolor="#004481" uuid="0af2a3df-a17b-453e-ba98-e6bd5ca40cf7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Frecuenia de Pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="75" width="110" height="25" forecolor="#004481" uuid="ce8e54f8-e87a-4b9d-ada0-629e62dd57f1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Plazo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="100" width="110" height="25" forecolor="#004481" uuid="4513c928-b071-40ef-825e-6031efba6d6c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Periodo de Gracia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="125" width="110" height="25" forecolor="#004481" uuid="863407b7-ae2c-41d5-804b-ac7b2a1d05cf">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[No Periodo de Gracia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="150" width="110" height="25" forecolor="#004481" uuid="e745a57d-281c-4fa3-8bf4-53be5a1e7b41">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Fecha Desembolso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="110" height="25" forecolor="#004481" uuid="f3d8ec6c-5f88-4fa6-a400-ff71c19905fe"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Valor del Préstamo]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="0" width="90" height="25" uuid="98da3d6b-128a-4199-9ff2-5776eaab0e6c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="25" width="90" height="25" uuid="569c5702-65f5-4437-bbb0-1d307f15a2e7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rate} + " %"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="50" width="90" height="25" uuid="464076f4-9cce-41c7-bf64-35b3b9f6cb90"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{termType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="75" width="90" height="25" uuid="1cf9f469-c14f-4fae-8784-f385b1f81d3b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{repaymentTerm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="100" width="90" height="25" uuid="ef643cef-8ee2-4e42-ad17-859919d25a98">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{withGracePeriod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="125" width="90" height="25" uuid="195a03b1-71ec-4242-b6a6-96026ff6b104">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{gracePeriod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="150" width="90" height="25" uuid="211c33e4-979c-43c9-9fbf-f3e5c8bf78ce">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{disbursementDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="0" width="110" height="25" forecolor="#000000" uuid="c8acdbcc-e635-4529-a187-a7c5d0d282e2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resumen:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="50" width="110" height="25" forecolor="#004481" uuid="3393b1ad-da2d-4c82-9a8d-e1f780f0fbe5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Suma de Cuotas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="25" width="110" height="25" forecolor="#004481" uuid="6a68fa01-fc7b-4f4f-bf95-997873d567a3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Importe de Préstamo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="75" width="110" height="25" forecolor="#004481" uuid="26579784-e5fb-49c4-a6f4-9c93d0d4bb04">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Suma de Interés]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="410" y="25" width="90" height="25" uuid="7d760095-57c3-4d7a-afd2-404dd9f96ebe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="50" width="90" height="25" uuid="0439cc32-da75-4336-966b-2343381c0c4e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{feeSum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="75" width="90" height="25" uuid="05bcec3d-f53e-4e41-99b0-80c7d12724b9"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{interestSum}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
