@@ -2,7 +2,7 @@
 Spring Boot, MongoDB and Cucumber(BDD), this project depends 2 components:
 - **Jaspert report Component**
 
- ```
+ ```xml
 	<dependency>
 		<groupId>com.integrator.jasper.report</groupId>
 		<artifactId>jasper-report-integrator</artifactId>
@@ -11,7 +11,7 @@ Spring Boot, MongoDB and Cucumber(BDD), this project depends 2 components:
  ```
 - **Mail integrator Component**
 
- ```
+ ```xml
 	<dependency>
 		<groupId>com.integrator.mail</groupId>
 		<artifactId>mail-integrator</artifactId>
@@ -22,7 +22,7 @@ Spring Boot, MongoDB and Cucumber(BDD), this project depends 2 components:
 ## Install Docker MongoDB
 - pull and run mongo image from docker hub 
 
- ```
+ ```bash
 	docker pull mongo:latest
 	docker run -d -p 27017:27017 --name mongodb mongo:latest
  ```
@@ -67,7 +67,7 @@ Spring Boot, MongoDB and Cucumber(BDD), this project depends 2 components:
  ```
 - Create secret for **dev** profile
 
- ```
+ ```bash
 	vault kv put secret/loan-simulator/dev @loan-simulator-dev.json
 	vault kv get secret/loan-simulator/dev
  ```
@@ -111,7 +111,7 @@ Spring Boot, MongoDB and Cucumber(BDD), this project depends 2 components:
  ```
 - Create secret for **cloud** profile
 
- ```
+ ```bash
 	vault kv put secret/loan-simulator/cloud @loan-simulator.json
 	vault kv get secret/loan-simulator/cloud
  ```
@@ -119,7 +119,7 @@ Spring Boot, MongoDB and Cucumber(BDD), this project depends 2 components:
 
 Profile **dev** (localhost)
 
- ```
+ ```yaml
 	spring:
 	   application:
 	      name: loan-simulator
@@ -131,7 +131,7 @@ Profile **dev** (localhost)
  ```
  Profile **cloud** (vault)
 
- ```
+ ```yaml
 	spring:
 	   application:
 	      name: loan-simulator
@@ -145,14 +145,14 @@ Profile **dev** (localhost)
 ## Run Test
 - Run test features, using **dev profile** and your **token vault**
 
- ```
+ ```bash
 	mvn clean test -Dspring.profiles.active=dev -Dspring.cloud.vault.token=00000000-0000-0000-0000-000000000000
  ```
 
 ## Run API in local
 - Once we have successfully conducted the tests, we will run our API on the local server.
 
- ```
+ ```java
 	mvn clean package -DskipTests
 	java -jar -Dserver.port=9192 -Dspring.profiles.active=dev -Dspring.cloud.vault.token=00000000-0000-0000-0000-000000000000 target/api-simulator-loan-1.0.0.jar 
  ```
@@ -164,7 +164,7 @@ Deploying Spring Boot and MongoDB as Containers Using Docker and Docker Compose
 
 - dockerize spring boot application then run spring boot docker image and link that container to mongo container 
 
- ```
+ ```java
 	mvn clean package -DskipTests
 	docker build -t api-simulator-loan:1.0 .
 	docker run -e "SPRING_CLOUD_VAULT_TOKEN=00000000-0000-0000-0000-000000000000" -p 9191:8080 --name api-simulator-loan --link mongodb:mongo -d api-simulator-loan:1.0
@@ -172,12 +172,12 @@ Deploying Spring Boot and MongoDB as Containers Using Docker and Docker Compose
 
 - check docker running containers, it should display two container ids 
 
- ```
+ ```bash
 	docker ps
  ```
 - check logs of spring boot image 
 
- ```
+ ```bash
 	docker logs api-simulator-loan
  ```
  
@@ -201,7 +201,7 @@ Deploying Spring Boot and MongoDB as Containers Using Docker and Docker Compose
 ```
 - login to mongo terminal to verify records
 
- ```
+ ```bash
 	docker exec -it mongodb bash
  ```
 - type mongo and enter
@@ -214,6 +214,6 @@ Deploying Spring Boot and MongoDB as Containers Using Docker and Docker Compose
 
 - Kill running container:
 
-```
+```bash
 docker rm <containerId>
 ```

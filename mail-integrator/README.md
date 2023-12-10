@@ -15,7 +15,7 @@ Gmail Server: Go to Google Account settings page, then search for “app passwor
 
 **application.yml** for main resource
 
-```
+```yaml
 spring:
    mail:
       default-encoding: UTF-8
@@ -34,10 +34,11 @@ spring:
       templates:
          path: templates
 ```
+
 **application.properties** for test resource
 
-```
-spring.mail.default-encoding: UTF-8
+```properties
+spring.mail.default-encoding=UTF-8
 spring.mail.host=smtp.gmail.com
 spring.mail.port=587
 spring.mail.username=xxxx@gmail.com
@@ -57,21 +58,21 @@ spring.mail.templates.path=templates
 ## Test (Use Cases)
 You can test this application using following command
 
-```
+```bash
 mvn clean test
 ```
 
 ## Build
 You can build this application using following command, if all is OK you can skip test *-DskipTests* (No recommend!)
 
-```
+```bash
 mvn clean install
 ```
 
 ## Deploy
 You can copy mail-integrator.jar to your server or you can add dependency on your pom.xml
 
-```
+```xml
 	<dependency>
 		<groupId>com.integrator.mail</groupId>
 		<artifactId>mail-integrator</artifactId>

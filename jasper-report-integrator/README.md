@@ -23,21 +23,21 @@ HTML, PDF, XLS, CSV, DOC
 ## Test (Use Cases)
 You can test this application using following command
 
-```
+```bash
 mvn clean test
 ```
 
 ## Build
 You can build this application using following command, if all is OK you can skip test *-DskipTests* (No recommend!)
 
-```
+```bash
 mvn clean install
 ```
 
 ## Deploy
 You can copy jasper-report-integrator.jar to your server or you can add dependency on your pom.xml
 
-```
+```xml
 	<dependency>
 		<groupId>com.integrator.jasper.report</groupId>
 		<artifactId>jasper-report-integrator</artifactId>
